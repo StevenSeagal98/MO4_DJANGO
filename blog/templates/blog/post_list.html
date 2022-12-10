@@ -1,25 +1,21 @@
-{% extends 'blog/base.html' %}
-{% load static %}
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Django Girls blog</title>
-        <link rel="stylesheet" href="{% static 'blog.css' %}">
-        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    </head>
-    <body>
+<div data-gb-custom-block data-tag="extends" data-0='blog/base.html'></div>
 
-        {% block content %}
-            {% for post in posts %}
-                <article class="post">
-                    <time class="date">
-                        {{ post.published_date }}
-                    </time>
-                    <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-                    <p>{{ post.text|linebreaksbr }}</p>
-                </article>
-            {% endfor %}
-        {% endblock %}
-    </body>
-</html>
+<div data-gb-custom-block data-tag="block"></div>
+
+    
+
+<div data-gb-custom-block data-tag="for"></div>
+
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+            <h1><a href="
+
+<div data-gb-custom-block data-tag="url" data-0='post_detail'>">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <a href="<div data-gb-custom-block data-tag="url" data-0='post_detail'>">Comments: {{ post.comments.count }}</a>
+        </div>
+    </div>
+
+</div>
